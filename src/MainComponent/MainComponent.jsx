@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import s from './MainComponent.module.css'
 
 const MainComponent = () => {
   const [input, setInput] = useState("");
@@ -39,6 +40,7 @@ const MainComponent = () => {
   return (
     <div>
       <input
+			className={s.inp}
         ref={inputRef}
         type="text"
         value={input}
@@ -48,10 +50,10 @@ const MainComponent = () => {
       <p>Renders: {renders.current} </p>
       <br />
       <br />
-      <section>
-        <button onClick={startTimer}>Start</button>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={resetTimer}>Reset</button>
+      <section className={s.sctn}>
+        <button className={s.btn} onClick={startTimer}>Start</button>
+        <button className={s.btn} onClick={stopTimer}>Stop</button>
+        <button className={s.btn} onClick={resetTimer}>Reset</button>
       </section>
       <br />
       <br />

@@ -1,9 +1,9 @@
-
+import MainComponent from "./MainComponent/MainComponent";
 
 function App() {
   return (
     <div className="App">
-
+      <MainComponent />
     </div>
   );
 }
